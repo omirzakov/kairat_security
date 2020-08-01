@@ -45,7 +45,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("/img/index.jfif");
+  background-image: url("../../img/index.jfif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

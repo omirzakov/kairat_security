@@ -13,6 +13,11 @@ li {
   list-style: none;
 }
 
+#map {
+  width: 100%;
+  height: 500px;
+}
+
 .header {
   width: 100%;
   background: #000000;
@@ -29,6 +34,18 @@ li {
 
 .header .logo img {
   width: 250px;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header-nav a {
+  margin: 0 30px;
 }
 
 .banner {
@@ -152,9 +169,10 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  text-align: center;
   cursor: pointer;
   font-size: 1.2em;
   -webkit-transition: 0.3s;
@@ -172,7 +190,7 @@ li {
 }
 
 .about-us .benefit-item div {
-  margin: 40px 30px;
+  margin: 40px auto;
 }
 
 .about-us .benefit-text {
@@ -328,9 +346,10 @@ li {
 
 .contacts button {
   border: none;
-  padding: 10px 50px;
+  padding: 15px 40px;
   border-radius: 16px;
   background: #fce300;
+  font-size: 2em;
   margin: 50px 0;
 }
 
@@ -338,10 +357,90 @@ li {
   color: #000000;
 }
 
+.feedback {
+  padding: 20px 0;
+  min-height: 70vh;
+  background-color: #181818;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback h2 {
+  text-align: center;
+}
+
+.feedback label {
+  text-align: center;
+}
+
+.feedback input, .feedback textarea {
+  margin: 30px 0;
+  padding: 10px;
+}
+
+.feedback textarea {
+  min-height: 200px;
+}
+
+.feedback input[name="submit"] {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.feedback input[name="submit"]:hover {
+  background: #FFC107;
+}
+
+.feedback .form-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 70%;
+}
+
 footer {
   width: 100%;
+  border-top: 1px solid #ffffff;
   min-height: 150px;
-  background: #2c2c2c;
+  background: #000000;
   color: #ffffff;
   padding: 30px;
 }

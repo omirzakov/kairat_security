@@ -12,6 +12,7 @@
             href="vendor/bootstrap-4.5.0-dist/css/bootstrap.min.css"
         />
         <link rel="stylesheet" href="styles/main/main.css" />
+        <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
         <title>Кайрат охранное агенство</title>
     </head>
     <body>
@@ -40,30 +41,19 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand text-white" href="#"></a>
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="#main"
-                                >Главная
-                                <span class="sr-only">(current)</span></a
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 header-nav">
+                            <a class="text-white" href="index.php"
+                                >Главная</a>
+                            <a class="text-white" href="#about-us"
+                                >О нас</a
                             >
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="#about-us"
-                                >О нас <span class="sr-only">(current)</span></a
-                            >
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="#services"
-                                >Услуги
-                                <span class="sr-only">(current)</span></a
-                            >
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="#contacts"
-                                >Контакты
-                                <span class="sr-only">(current)</span></a
-                            >
-                        </li>
+                            <a class="text-white" href="#services">
+                                Цены
+                               </a>
+                            <a class="text-white" href="#contacts"
+                                >Контакты</a>
+                            <a class="text-white" href="services.php"
+                                >Услуги</a>
                     </ul>
                 </div>
             </nav>
@@ -181,7 +171,7 @@
         </div>
         <div class="licenses">
             <div class="container">
-                <h2>Лицензии</h2>
+                <h2>Отзывы</h2>
                 <div class="licenses-container">
                     <div class="licenses-item">
                         <img src="img/licenses/грамота1.jpg" alt="" />
@@ -316,7 +306,17 @@
                         Написать
                     </a>
                 </button>
-                <div id="map" style="max-width: 100%; min-height: 400px;"></div>
+                <div id="map" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+        <div class="feedback">
+            <h2 class="text-white">Оставьте свои контакты <br> Мы обязательно с вами свяжемся</h2>
+            <div class="form-wrapper">
+                <form action="mail.php" method="post">
+                    <input type="text" name="name" placeholder="Имя">
+                    <textarea name="msg" placeholder="Сообщение"></textarea>
+                    <input type="submit" name="submit" value="Отправить">
+                </form>
             </div>
         </div>
         <footer class="footer">
@@ -327,10 +327,11 @@
                 <div class="nav">
                     <p>Навигация</p>
                     <nav>
-                        <a href="#main">Главная</a>
+                        <a href="index.php">Главная</a>
                         <a href="#about-us">О нас</a>
                         <a href="#services">Услуги</a>
                         <a href="#contacts">Контакты</a>
+                        <a href="services.php">Услуги</a>
                     </nav>
                 </div>
                 <div class="contact">
@@ -347,19 +348,9 @@
         <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
         <script src="vendor/bootstrap-4.5.0-dist/js/bootstrap.bundle.js"></script>
         <script src="vendor/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
-        <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
         <script src="js/anchor.js"></script>
         <script src="js/typeit.js"></script>
         <script src="js/counter.js"></script>
-        <script type="text/javascript">
-            DG.then(function() {
-                var map = DG.map('map', {
-                    center: [43.212, 76.898],
-                    zoom: 15
-                });
-
-                DG.marker([43.212, 76.898]).addTo(map).bindPopup('Адрес: Темир Тау, Гагарина проспект, 236, Алматы');
-            });
-        </script>
+        <script src="js/map.js"></script>
     </body>
 </html>
